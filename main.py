@@ -1,4 +1,5 @@
 from turtle import pos
+from typing import Optional
 from fastapi import Body, FastAPI
 from pydantic import BaseModel
 
@@ -8,6 +9,7 @@ class Post(BaseModel):
     title: str
     description: str
     published: bool = True
+    rating: Optional[int] = None
 
 @app.get("/")
 async def root():
