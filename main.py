@@ -1,3 +1,4 @@
+from turtle import pos
 from fastapi import Body, FastAPI
 from pydantic import BaseModel
 
@@ -17,5 +18,6 @@ async def get_posts():
 
 @app.post("/createposts")
 async def create_post(posts: Post):
-    print(posts)
+    print(f"Post title: {posts.title}")
+    print(f"Post content: {posts.description}")
     return {"data": "post sent to server"}
