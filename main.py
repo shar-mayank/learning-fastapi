@@ -25,4 +25,5 @@ async def create_post(posts: Post):
     print(f"Post content: {posts.description}")
     print(f"Post published: {posts.published}")
     print(f"Post rating: {posts.rating}")
+    print(posts.model_dump())
     return {"data": "post sent to server"}
