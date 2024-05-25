@@ -23,4 +23,6 @@ async def get_posts():
 async def create_post(posts: Post):
     print(f"Post title: {posts.title}")
     print(f"Post content: {posts.description}")
+    print(f"Post published: {posts.published}")
+    print(f"Post rating: {posts.rating}")
     return {"data": "post sent to server"}
