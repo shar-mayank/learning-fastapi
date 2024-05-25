@@ -16,6 +16,6 @@ async def get_posts():
     return {"data": "this is a post"}
 
 @app.post("/createposts")
-async def create_post(posts: dict = Body(...)):
+async def create_post(posts: Post):
     print(posts)
-    return {"new_post": f"Title: {posts['title']} and the Content is: {posts['description']}"}
+    return {"data": "post sent to server"}
