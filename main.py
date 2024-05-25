@@ -7,6 +7,8 @@ app = FastAPI()
 class Post(BaseModel):
     title: str
     description: str
+    published: bool = True
+    
 
 @app.get("/")
 async def root():
